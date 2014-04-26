@@ -39,6 +39,5 @@ data.each_with_pagename do |name, sheet|
         shares.security = company
       end
     end
-    break
   end
 end
