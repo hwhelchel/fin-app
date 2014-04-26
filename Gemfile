@@ -39,6 +39,9 @@ group :development, :test do
   gem 'factory_girl'
 end
 
+# Reading Excel Docs
+gem 'roo'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
