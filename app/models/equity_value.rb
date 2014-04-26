@@ -1,4 +1,5 @@
 class EquityValue < ActiveRecord::Base
-  belongs_to :security, :year
+  belongs_to :security
+  belongs_to :year
 
 end

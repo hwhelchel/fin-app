@@ -1,5 +1,5 @@
 class Year < ActiveRecord::Base
-  has_many :shares_outstandings
+  has_many :shares_outstanding
   has_many :net_earnings
   has_many :equity_values
   has_many :dividends_paid_outs 
