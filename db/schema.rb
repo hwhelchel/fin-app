@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140426151247) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "average_annual_price_to_earnings_ratios", force: true do |t|
     t.decimal  "pe",          precision: 12, scale: 2
     t.integer  "year_id"

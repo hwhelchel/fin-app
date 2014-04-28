@@ -8,15 +8,12 @@
 
 
 data = Roo::Spreadsheet.open('security_data.xls')
-company_lookup = Hash[data.sheet(data.sheets[2]).column('A').zip data.sheet(data.sheets[2]).column('B')]
 data.each_with_pagename do |name, sheet|
   if name =~ /Data(?! Summary)/
-    # create security
-    company = Security.create(name: sheet.row(9).at(1).strip)
-    # add long term debt
-    company.long_term_debt = sheet.row(13).at(6)
-    # ticker
-    company.ticker = company_lookup[company.name]
+    # create company
+    company = Security.create(name: sheet.row(9).at(1).strip,
+      ticker: name.split(' ',2)[0],
+      long_term_debt: sheet.row(13).at(6))
     # find years
     years = sheet.row(15)[1..11]
     # create years
@@ -39,5 +36,9 @@ data.each_with_pagename do |name, sheet|
         shares.security = company
       end
     end
+    puts "-"*80
+    puts company.name
+    puts company.ticker
+    puts company.long_term_debt
   end
 end
