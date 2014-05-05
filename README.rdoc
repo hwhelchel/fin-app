@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is an exercise in:
 
-Things you may want to cover:
+-Creating a JSON API in Rails
+-Using Backbone and D3.js to model and visualize JSON data.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+TODO:
+Add Backbone MV*
+Add D3.js Charts
+Add Fuzzy Search of Securities
