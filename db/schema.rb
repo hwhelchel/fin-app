@@ -11,37 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140426151247) do
+ActiveRecord::Schema.define(version: 20140505012638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "average_annual_price_to_earnings_ratios", force: true do |t|
-    t.decimal  "pe",          precision: 12, scale: 2
-    t.integer  "year_id"
-    t.integer  "security_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "dividends_paid_outs", force: true do |t|
+  create_table "performances", force: true do |t|
+    t.decimal  "shares_outstanding", precision: 12, scale: 2
+    t.decimal  "net_earnings",       precision: 12, scale: 2
     t.decimal  "dividends_paid_out", precision: 12, scale: 2
-    t.integer  "year_id"
-    t.integer  "security_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "equity_values", force: true do |t|
-    t.decimal  "equity_value", precision: 12, scale: 2
-    t.integer  "year_id"
-    t.integer  "security_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "net_earnings", force: true do |t|
-    t.decimal  "net_earnings", precision: 12, scale: 2
+    t.decimal  "equity_value",       precision: 12, scale: 2
+    t.decimal  "pe",                 precision: 12, scale: 2
     t.integer  "year_id"
     t.integer  "security_id"
     t.datetime "created_at"
@@ -53,14 +33,6 @@ ActiveRecord::Schema.define(version: 20140426151247) do
     t.string   "ticker"
     t.decimal  "price",          precision: 12, scale: 2
     t.decimal  "long_term_debt", precision: 12, scale: 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "shares_outstandings", force: true do |t|
-    t.decimal  "shares_outstanding", precision: 12, scale: 2
-    t.integer  "year_id"
-    t.integer  "security_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

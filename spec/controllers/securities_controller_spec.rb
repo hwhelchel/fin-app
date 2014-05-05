@@ -8,10 +8,6 @@ describe SecuritiesController do
     it 'is ok' do
       expect(response).to be_ok
     end
-
-    it 'returns the set of securities' do
-      expect(response.body).to eq [security.attributes].to_json
-    end
   end
 
 end

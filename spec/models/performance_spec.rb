@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AverageAnnualPriceToEarningsRatio do
+describe Performance do
 
   describe 'associations' do
     it { should belong_to :security }
