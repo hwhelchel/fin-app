@@ -1,11 +1,11 @@
 == README
 
-This application is an exercise in:
+This application is an exercise in:  
 
--Creating a JSON API in Rails
--Using Backbone and D3.js to model and visualize JSON data.
+-Creating a JSON API in Rails  
+-Using Backbone and D3.js to model and visualize JSON data.  
 
-TODO:
-Add Backbone MV*
-Add D3.js Charts
+TODO:  
+Add Backbone MV*  
+Add D3.js Charts  
 Add Fuzzy Search of Securities
